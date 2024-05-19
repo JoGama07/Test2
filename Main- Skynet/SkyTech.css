@@ -1,0 +1,593 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+/* Navbar */ 
+
+
+.navbar {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    font-family: calibri;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2); /* Hintergrundfarbe schwarz mit 20% Transparenz */
+}
+.image-head {
+    display: flex;
+    justify-content: center;
+    margin-left: 1%;
+    z-index: 9999;
+    height: 3rem;
+    content: url(Bilder/logo.png);
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 100%;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 100%;
+    margin-right: 25px;
+}
+
+/* Start */ 
+.image-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url(Bilder/Hintergrundbild2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.Title1 {
+    padding-top: 10.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: white;
+    font-family: monospace;
+}
+
+.Title2 {
+    padding-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+}
+/* Button */
+.containerbutton {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.custom-button
+{
+    padding-top: 50%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2); /* Himmelblau mit einem Alpha-Wert von 0.5 (halbdurchsichtig) */
+    border-radius: 15px; /* Verrundete Ecken */
+    border: none; /* Keine Rahmenlinie */
+    font-size: 30px; /* Schriftgröße */
+    padding: 10px 20px; /* Innenabstand */
+
+    margin: 0px;
+    width: 20%;
+}
+
+    .ButtonText{
+    padding-top: 0px;
+    top: 0;
+    font-size: 40px;
+    color: white;
+    opacity: 100%;
+
+}
+
+/* Qoute */ 
+.Transition {
+    background: linear-gradient(to bottom, rgba(31, 44, 45, 0), rgba(31, 44, 45, 1));
+    z-index: 1;
+    padding-top: 250px;
+}
+.banner {
+    width: 100%;
+    background-color:  rgba(31, 44, 45, 1);
+
+    color: white;
+    text-align: center;
+    height:400px;
+}
+
+.Überschrift {
+    padding-top: 25px;
+    font-size: 50px;
+    color: white;
+    font-family: monospace;
+    text-decoration-line:underline;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.Untertitel{
+    font-size: 20px;
+    color: white;
+    font-family: monospace;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+
+
+/* Shop-Titel */
+
+
+.Title3{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+}
+
+
+.BannerB {
+    position: relative;
+    justify-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 100%;
+    background-image: url(Bilder/Horizont.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    border: 2px solid white
+}
+
+/* Shop-Produkte */
+
+.Shop-Parent {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgba(31, 44, 45, 1);
+    /*
+    grid-template-rows: minmax(auto, 1fr)
+    */
+  
+    gap: 2px;
+    justify-content: space-between;
+}
+
+.Shop-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: calc(1080px / 3);
+    background-color: rgba(31, 44, 45, 1);
+    color: white;
+    font-size: 20px;
+    height: 350;
+    line-height: 1.7;
+    border-style: solid;
+    border-color: rgb(25,25,25);
+    overflow: hidden;
+    position: relative; /* Position relative für das Pseudoelement */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    line-height: 17.5;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+
+
+}
+
+.Shop-item img {
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 0;
+}
+
+/* Hover-Effekt hinzufügen */
+.Shop-item:hover {
+
+    color: white;
+}
+
+/* Pseudoelement für zusätzlichen Text beim Hover */
+.Shop-item::after {
+    content: 'Zusätzlicher Text beim Hover!';
+    display: none;
+    position: absolute;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(31, 44, 45, 0.8);
+    color: white;
+    border: 1px solid black;
+}
+
+.Shop-item:hover::after {display: block;}
+
+.item1:hover::after { content: ' Inceptor';}
+.item2:hover::after {  content: 'Provecta';}
+.item3:hover::after {content: 'Artifex';}
+.item4:hover::after {content: 'Omega';}
+
+
+/* Fußbereich */
+.Clearspace {
+    width: 100%;
+    background-color:  rgba(31, 44, 45, 1);
+
+    color: white;
+    text-align: center;
+    height:120px;
+}
+
+.Clearspace2 {
+    width: 100%;
+    background-color:  rgba(31, 44, 45, 1);;
+
+    color: white;
+    text-align: center;
+    height:150px;
+}
+
+.Transition2 {
+    background: linear-gradient(to bottom, rgba(31, 44, 45, 1), rgb(0, 0, 0));
+    z-index: 1;
+    padding-top: 200px;
+}
+
+
+
+.Hintergrund {
+    width: 100%;
+    background-color:  black;
+
+    color: white;
+    text-align: center;
+    height:900px;
+}
+
+.Prinzipien-Parent {
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgba(0, 0, 0, 1);
+    gap: 2px;
+    justify-content: space-between;
+}
+
+.Prinzipen-Item {
+
+    display: flex;
+    padding-top: 150px; 
+    margin: 0 auto;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    font-size: 30px;
+    height: 350px;
+    line-height: 1.7;
+    border-style: solid;
+    border-color: rgb(25,25,25);
+    position: relative; /* Position relative für das Pseudoelement */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    justify-content: center;
+    text-align: center;
+    display: flex;
+   
+    font-family: monospace;
+}
+
+.Prinzipen-Item img {
+    align-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 0;
+    right: 0;
+}
+
+
+.Fußzeile-Parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgba(0, 0, 0, 1);
+    border-color: black;
+    justify-content: space-between;
+}
+
+.Fußzeile-Item {
+    display: flex;
+    margin: 0 auto;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 1);
+    border-color: black;
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+   
+    font-family: monospace;
+}
+.clickable-element {
+    display: inline-block;
+    color: white; /* Weiß als Textfarbe */
+    cursor: pointer;
+    text-decoration: none;
+}
+@media screen and  (max-width: 1000px ) {
+    .Shop-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: calc(1080px / 3);
+    background-color: rgba(31, 44, 45, 1);
+    color: white;
+    font-size: 20px;
+    border-style: solid;
+    border-color: rgb(25,25,25);
+    overflow: hidden;
+    position: relative; /* Position relative für das Pseudoelement */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+
+
+    }
+    .custom-button
+{
+    padding-top: 50%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2); /* Himmelblau mit einem Alpha-Wert von 0.5 (halbdurchsichtig) */
+    border-radius: 15px; /* Verrundete Ecken */
+    border: none; /* Keine Rahmenlinie */
+    font-size: 20px; /* Schriftgröße */
+    padding: 10px 20px; /* Innenabstand */
+
+    margin: 0px;
+    width: 50%;
+}
+    li a {
+        
+        font-size: 13px;
+        font-weight: bold;
+        opacity: 100%;
+        margin-right: 12px;
+    }
+    .body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+            overflow-x: hidden;
+
+    }
+    .Title1 {
+        padding-top: 43.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: white;
+        font-family: monospace;
+    }
+    
+    .Title2 {
+        padding-top: 14%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: white;
+        font-family: monospace;
+        text-align: center;
+    }
+
+    .Überschrift {
+        padding-top: 25px;
+        font-size: 30px;
+        color: white;
+        font-family: monospace;
+        text-decoration-line:underline;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    .Untertitel{
+        font-size: 20px;
+        color: white;
+        font-family: monospace;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    
+    .Title3{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    color: white;
+    font-family: monospace;
+        text-align: center;
+    }
+
+    
+     
+        .Shop-Parent {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        background-color: rgba(31, 44, 45, 1);
+        /*
+        grid-template-rows: minmax(auto, 1fr)
+        */
+      
+        gap: 2px;
+        justify-content: space-between;
+    }
+    
+    .Title3{
+        padding-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 55px;
+        color: white;
+        font-family: monospace;
+            text-align: center;
+        }
+    
+    .Shop-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: calc(750px / 4);
+        background-color: rgba(31, 44, 45, 1);
+        color: white;
+        font-size: 20px;
+        height: 350;
+        line-height: 1.7;
+        border-style: solid;
+        border-color: rgb(25,25,25);
+        overflow: hidden;
+        position: relative; /* Position relative für das Pseudoelement */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        line-height: 17.5;
+        justify-content: center;
+        align-items: center;
+        font-family: monospace;
+    
+    
+    }
+    
+    .Prinzipien-Parent {
+        padding: 0px;
+        padding-left: 53px;
+
+        display: grid;
+        grid-template-columns: 1fr ;
+        background-color: rgba(0, 0, 0, 1);
+        border-color: black;
+        justify-content: center;
+    }
+    
+    .Prinzipen-Item {
+        padding-top: 100px;
+        display: flex;
+        margin: 0 0;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 1);
+        color: white;
+        font-size: 30px;
+        height: 200px;
+        line-height: 1.7;
+        border-style: solid;
+        border-color: rgb(25,25,25);
+        position: relative; /* Position relative für das Pseudoelement */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        justify-content: center;
+        text-align: center;
+        display: flex;
+       
+        font-family: monospace;
+    }
+    .navbar {
+    position: fixed;
+    left: 0;
+    max-width: 100%;
+    font-family: calibri;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2); /* Hintergrundfarbe schwarz mit 20% Transparenz */
+    } 
+ 
+    .Fußzeile-Parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        background-color: rgba(0, 0, 0, 1);
+        border-color: black;
+        justify-content: space-between;
+    }
+
+    .Fußzeile-Item {
+        display: flex;
+        margin: 0 auto;
+        max-width: 300px;
+        background-color: rgba(0, 0, 0, 1);
+        border-color: black;
+        color: white;
+        font-size: 30px;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+       
+        font-family: monospace;
+    }
+
+    .ul {
+        justify-content: left;
+    }
+    
+}
